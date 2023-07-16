@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    
+
+  // Display log messages from server
+  div#logContainer
+
+  // Your other Pug content goes here
+    
+  script.
+  //-  const logContainer = document.getElementById('logContainer');
+  //-  const socket = new WebSocket('ws://localhost:3000');
+  //-  socket.onopen = (event) => {
+  //-    console.log("WebSockt connect established")
+  //-  }
+  //-  socket.onmessage = (event) => {
+  //-    try{
+  //-      const data = JSON.parse(event.data);
+  //-    if (data.type === 'log') {
+  //-      const logMessage = document.createElement('p');
+  //-      logMessage.textContent = data.message;
+  //-      logContainer.appendChild(logMessage);
+  //-      }else{
+  //-        console.log('Received unexpected data:', data);
+  //-      }
+  //-    }catch(error){
+  //-      console.log('error while pocessing received data:',error)
+  //-    }
+  //-    };
+       function triggerCustomFunction() {
+       // Clear the log container before triggering the custom function
+       logContainer.innerHTML = '';
+
+       // Get the selected HAR file from the input element
+       const harFileInput = document.getElementById('harFileInput');
+       const harFile = harFileInput.files[0];
+
+       // Get the values of the checkboxes and text inputs
+       const checkbox1 = document.getElementById('checkbox1').checked;
+       const checkbox2 = document.getElementById('checkbox2').checked;
+       const checkbox3 = document.getElementById('checkbox3').checked;
+
+       const textInput1 = document.getElementById('textInput1').value;
+       const textInput2 = document.getElementById('textInput2').value;
+       const textInput3 = document.getElementById('textInput3').value;
+
+       // Prepare the input data to send to the server
+       const inputData = {
+         harFile,
+         checkbox1,
+         checkbox2,
+         checkbox3,
+         textInput1,
+         textInput2,
+         textInput3,
+       };
+
+       // Send the input data to the server using WebSocket
+       socket.send(JSON.stringify(inputData));
+       console.log(inputData)
+       }
+

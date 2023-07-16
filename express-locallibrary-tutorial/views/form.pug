@@ -1,0 +1,32 @@
+// views/form.pug
+doctype html
+html
+  head
+    title Har To K6 Converter
+  body
+    form(action='/submit' method='post')
+      // File input to upload the HAR file
+      label(for='harFileInput') Select Har file:
+      input(type='file' id='harFileInput' name='harFileInput')
+      br
+  
+      // Checkbox inputs
+      label(for='checkbox1') Generate Data File:
+      input(type='checkbox' id='checkbox1' name='checkbox1')
+      br
+      label(for='checkbox2') Generate Suite File:
+      input(type='checkbox' id='checkbox2' name='checkbox2')
+      br
+      label(for='checkbox3') Generate Config File:
+      input(type='checkbox' id='checkbox3' name='checkbox3')
+      br
+      label(for='input1') Scipt file name:
+      input(type='text' name='input1' id='input1')
+      br
+      label(for='input2') Suite file name:
+      input(type='text' name='input2' id='input2')
+      br
+      label(for='input3') Config file name:
+      input(type='text' name='input3' id='input3')
+      br
+      button(type='submit') Submit

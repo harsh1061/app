@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  form(action="/submit" method = "post")
+    // File input to upload the HAR file
+    input(type='file' id='harFileInput' name='filename')
+    br
+
+    // Checkbox inputs
+    input(type='checkbox' id='checkbox1' name='checkbox1')
+    br
+    input(type='checkbox' id='checkbox2' name='checkbox2')
+    br
+    input(type='checkbox' id='checkbox3' name='checkbox3')
+    br
+
+    // Text inputs
+    input(type='text' id='textInput1' placeholder='Text Input 1' name='textInput1')
+    br
+    input(type='text' id='textInput2' placeholder='Text Input 2' name='textInput2')
+    br
+    input(type='text' id='textInput3' placeholder='Text Input 3' name='textInput3')
+    br
+
+    // Your UI elements go here
+    button(type="submit") Submit
+
