@@ -1,0 +1,90 @@
+# Project Name README
+
+Welcome to the **[Project Name]**! This project is designed to facilitate the conversion and generation of suite, data, and config files based on the provided input HAR file.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Starting the Server](#starting-the-server)
+  - [Using the Web Application](#using-the-web-application)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Getting Started
+
+Follow the instructions below to set up and run the project locally.
+
+### Prerequisites
+
+To run this project, you need to have the following software installed on your machine:
+
+- Node.js (https://nodejs.org)
+- Git (https://git-scm.com/)
+
+### Installation
+
+1. Clone the repository into your local folder using the following command:
+
+   ```
+   git clone https://github.com/your-username/project-name.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd project-name
+   ```
+
+3. Install the required npm packages by running:
+
+   ```
+   npm install
+   ```
+
+## Usage
+
+### Starting the Server
+
+To start the server and launch the web application, follow these steps:
+
+1. Locate the `start.bat` file in the project directory.
+2. Double click on the `start.bat` file.
+
+The server will now start, and the web application will be accessible on http://localhost:1825.
+
+### Using the Web Application
+
+1. Open your web browser and go to http://localhost:1825.
+
+2. In the web application UI, you will find the following input fields:
+
+   - **HAR File Input**: Upload your desired HAR file.
+   - **Checkboxes**: Select the options you want to generate, such as suite, data, and config files.
+   - **File Names**: Provide names for the generated files.
+
+3. Once you've filled in the necessary details, click on the "Generate" button.
+
+4. The backend will process the input, perform the conversion, and generate the requested files.
+
+5. The generated files will be available in the `script-files` folder within the project directory.
+
+## Contributing
+
+We welcome contributions from the community! If you want to contribute to the project, please follow these steps:
+
+1. Fork the repository on GitHub.
+2. Create a new branch with a descriptive name for your feature or bug fix.
+3. Make your changes and commit them with clear commit messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository, explaining your changes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
+
+---
+
+Thank you for using **[Project Name]**! If you encounter any issues or have questions, please feel free to open an issue on the GitHub repository. Happy coding
